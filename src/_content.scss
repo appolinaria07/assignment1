@@ -1,0 +1,85 @@
+#headline  {
+    @include dimension(100%, 130px);
+    background: $coral;
+    text-align: center;
+    margin: 0 auto;
+
+    h1 {
+                    color: $white;
+                    font-size: 2.5em;
+                    @include fWeight(100);
+                    padding-top: 50px;
+                    @include mQuery(459px) {
+                    font-size: 1.5em; 
+                    padding-top:30px;
+                    }
+                    @include mQuery(767px) {
+                        font-size: 2em;
+                        padding-top: 50px;
+                    }
+                }
+    
+}
+
+#content {
+    @include dimension($width: 940px);
+    margin: 20px auto;
+    @include mQuery(959px) {
+        width: inherit;
+    }
+
+    h3 {
+        color: $grey;
+        font-size:2em;
+        @include fWeight;
+                @include mQuery(459px) {
+            font-size: 1.6em;
+        }
+    }
+}
+
+#products {
+    @include dimension($width: 460px);
+    @include float;
+    @include mQuery(767px) {
+            width: 96%;
+            margin: 0 2%;
+            float: none;
+        }
+        @include mQuery(959px) {
+            width: 46%;
+            margin:0 2%;
+        }
+
+    img {
+            @include float;
+            margin-right: 20px;
+    }
+
+    article {
+        margin-bottom: 40px;
+                    img {
+                @include mQuery(459px) {
+                    display: none;
+                }
+            }
+    }
+
+    h4 {
+        @include lHeight(1em);
+    }
+}
+
+#testimonials {
+    @include dimension($width: 460px);
+    @include float(right);
+                @include mQuery(767px) {
+                width: 96%;
+                margin: 0 2%;
+                float: none;
+            }
+            @include mQuery(959px) {
+                width: 46%;
+                margin:0 2%;
+            }
+}

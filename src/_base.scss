@@ -1,0 +1,22 @@
+body {
+    font-family: $body-font, sans-serif;
+    font-size: 1em;
+    @include lHeight(2em);
+    background: $body-image $white repeat-x;
+    margin: 0;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    @include mQuery(459px) {
+        @include dimension($width: 300px);
+    }
+    @include mQuery(767px) {
+        @include dimension($width: 460px);
+    }
+    @include mQuery(959px) {
+        width:768px;
+    }
+}

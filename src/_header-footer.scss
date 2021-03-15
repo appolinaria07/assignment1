@@ -1,0 +1,144 @@
+
+//HEADER
+
+header {
+    width: inherit;
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        @include mQuery(459px) {
+            margin-bottom: 80px;
+        }
+        @include mQuery(767px) {
+            margin-bottom: 100px;
+        }
+    }
+
+    h1 {
+        color: $peach;
+        @include fWeight(100);
+        font-size: 4em;
+        @include lHeight;
+
+                &:first-child {
+            @include mQuery(459px) {
+                font-size: 1.4em;
+                margin-bottom: 20px;
+            }
+        }
+        @include mQuery(767px) {
+            font-size: 2em;
+        }
+        @include mQuery(959px) {
+            font-size: 3em;
+        }
+    }
+
+    h2 {
+        color: $white;
+        @include fWeight(900);
+        font-size: 2.5em;
+        @include lHeight;
+        margin-bottom: 70px;
+
+                @include mQuery(459px) {
+            font-size: 1.4em;
+        }
+        @include mQuery(767px) {
+            font-size: 1em;
+            
+        }
+        @include mQuery(959px) {
+            font-size: 1.5em;
+        }
+    }
+
+    h3 {
+        color: $grey;
+        @include fWeight(400);
+        font-size: 2em;
+        @include lHeight;
+        margin-bottom: 50px;
+        @include mQuery(459px) {
+                        color: $white;
+                        font-size: 1em;
+                    }
+                    @include mQuery(767px) {
+                        font-size: 1.5em;
+                    }
+    }
+}
+
+
+
+.greybar {
+    @include dimension(100%, 90px);
+    background: $light-blue;
+    clear: both;
+    padding-top: 30px;
+    @include mQuery(459px) {
+        display: none;
+    }
+}
+
+footer {
+    @include dimension(100%, 120px);
+    background: $dark-blue;
+    text-align: center;
+    color: $white;
+    padding-top: 50px;
+    @include mQuery(459px) {
+        text-align: center;
+    }
+
+        p {
+            @include mQuery(459px) {
+                float: none;
+                margin: 0;
+            }
+        }
+        img {
+        @include mQuery(459px) {
+            float: none;
+            margin: 0;
+        }
+    }
+}
+
+
+.social-media {
+    margin: 0 auto;
+    @include dimension($width: 165px);
+    
+    div {
+        @include float;
+        // @include clearfix;
+        margin-right: 5px;
+    }
+
+    a {
+        display: block;
+        @include dimension(36px, 36px);
+        text-indent: -9999px;
+    }
+
+    div.one {
+        background: $social-image 0 0;
+    }
+
+    div.two {
+        background: $social-image -38px 0;
+    }
+
+    div.three {
+        background: $social-image -76px 0;
+    }
+
+    div.four {
+        background: $social-image -114px 0;
+    }
+}

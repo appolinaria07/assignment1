@@ -1,0 +1,56 @@
+figure {
+    @include dimension;
+    background: $figure-image no-repeat 0 50px;
+    float: left;
+    display: block; 
+    margin: 0;
+}
+
+
+nav {
+    @include dimension(540px, 190px);
+    float: left;
+    text-align: right;
+        @include mQuery(459px) {
+        margin-bottom: 40px im !important;
+    }
+    text-align: right;
+    @include mQuery(959px) {
+        width: inherit;
+        height: 50px;
+        float: none;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type:none;
+        margin-top: 95px;
+                @include mQuery(959px) {
+            margin-top: 0;
+        }
+    }
+
+    ul li {
+        display: inline;
+        font-size: 0.8em;
+        margin-right: 10px;
+                @include mQuery(767px) {
+            font-size: 0.8em;
+            margin: 0 5px;
+        }
+        @include mQuery(959px) {
+            font-size: 1em;
+            margin: 0 10px;
+        }
+    }
+
+    ul li a  {
+        color: $peach;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+
+      &:hover           {
+          color: $white;}
+    }
+}
+
